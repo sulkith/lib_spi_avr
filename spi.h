@@ -8,12 +8,14 @@
 #endif
 
 #ifndef SPI_BUFFER_LENGTH
-#define SPI_BUFFER_LENGTH 32
+#define SPI_BUFFER_LENGTH 128
 #endif
 
 void spi_init();
 void spi_write(uint8_t* data, uint8_t length, void (*callback)(uint8_t *));
 void spi_read(uint8_t length, void (*callback)(uint8_t *));
+void spi_start();
+void spi_stop();
 uint8_t *spi_wait();
 
 #endif
