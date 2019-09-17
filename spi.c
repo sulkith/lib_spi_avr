@@ -18,8 +18,8 @@ static struct {
 
 void spi_init() {
 	DDRB|=_BV(PB5)|_BV(PB3)|_BV(PB2);//set SCK MOSI CS as output
-	SPCR = _BV(SPIE)|_BV(MSTR);
-	SPSR = 0x01;//double the SPI speed.
+	SPCR = _BV(SPIE)|_BV(MSTR)|_BV(SPR0);
+//	SPSR = 0x01;//double the SPI speed.
 
 	busy = SPI_IDLE;
 
