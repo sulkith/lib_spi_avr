@@ -7,9 +7,9 @@
 #define SPI_FREQ 100000UL
 #endif
 
-#ifndef SPI_BUFFER_LENGTH
-#define SPI_BUFFER_LENGTH 128
-#endif
+//#ifndef SPI_BUFFER_LENGTH
+#define SPI_BUFFER_LENGTH 132
+//#endif
 
 void spi_init();
 void spi_write(uint8_t* data, uint8_t length, void (*callback)(uint8_t *));
